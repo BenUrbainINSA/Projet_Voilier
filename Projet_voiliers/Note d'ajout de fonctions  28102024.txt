@@ -1,0 +1,16 @@
+Note d'ajout de fonctions : 28/10/2024
+
+| Encodeur |
+
+// Creation du driver et des fonction importantes.
+
+- Ajout d'un procédure d'initialisation de l'encodeur en utilisant les entrée PA0 (A), PA1(B) et PA2(Z) sur le TIMER 2 en mode encodeur.
+- Ajout d'une fonction Get_MyENcoder et Get_MyEncoder_In_Deg qui renvois la valeur de l'encodeur pour la 1ere en fonction de l'ARR et pour la deuxieme en degrés
+- Ajout d'une fonction Reset_MyEncoder qui place le conteur a 0 
+
+| MyGPIO |
+
+// Modification du driver GPIO afin de prendre en charge la lévée d'interuption lorsque Z passe à 1 
+
+- Ajout d'une procédure MyGPIO_Active_EXTI2_IT qui permet d'activer la gestion de l'interruption EXTIx sur le pin PA2 lors d'un front montant (quand Z passe a 1) 
+- Ajout d'une procedure EXTI2_IRQHandler qui aquite l'intérruption et execute une fonction passé en argument. 
