@@ -1,3 +1,40 @@
+Voici la table des matières mise à jour, avec l'encodeur en premier suivi de l'ADC :
+
+# Table des Matières
+
+1. **Introduction**
+   - 1.1. Présentation du Projet
+   - 1.2. Objectifs
+
+2. **Documentation de l'Encodeur**
+   - 2.1. Introduction à l'Encodeur
+   - 2.2. Description du Code
+      - 2.2.1. Fonction `MyEncoder_Base_Init`
+      - 2.2.2. Fonction `Get_MyEncoder`
+      - 2.2.3. Fonction `Get_MyEncoder_In_Deg`
+      - 2.2.4. Fonction `Reset_MyEncoder`
+   - 2.3. Utilisation de l'Encodeur
+      - 2.3.1. Initialisation de l'Encodeur
+      - 2.3.2. Obtention de la Valeur de l'Encodeur
+      - 2.3.3. Réinitialisation de l'Encodeur
+- 2.4. Conclusion de l'Encodeur
+
+3. **Documentation de l'ADC**
+   - 3.1. Introduction à l'ADC
+   - 3.2. Description du Code
+      - 3.2.1. Fonction `MyADC_Init`
+      - 3.2.2. Fonction `MyADC_StartConv`
+      - 3.2.3. Fonction `MyADC_Read`
+      - 3.2.4. Gestion des Interruptions avec `ADC1_2_IRQHandler`
+   - 3.3. Utilisation de l'ADC
+      - 3.3.1. Initialisation de l'ADC
+      - 3.3.2. Démarrage de la Conversion
+      - 3.3.3. Lecture des Résultats
+- 3.4. Conclusion de l'ADC
+
+---
+# Introduction 
+	blablalbla
 
 # Documentation de l'Encodeur
 
