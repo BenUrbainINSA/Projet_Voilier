@@ -8,16 +8,16 @@
 
 2. **Documentation de l'Encodeur**  
    2.1. Introduction aux Encodeurs  
-   2.2. Caractéristiques des Encodeurs Incrémentaux  
-   2.3. Caractéristiques Particulières dans Notre Cas d'Utilisation  
-   2.4. Description du Code  
-      - 2.4.1. Fichiers Inclus  
-      - 2.4.2. Fonction `MyEncoder_Base_Init`  
-      - 2.4.3. Fonction `Get_MyEncoder`  
-      - 2.4.4. Fonction `Get_MyEncoder_In_Deg`  
-      - 2.4.5. Fonction `Reset_MyEncoder`  
-   2.5. Utilisation de l'Encodeur  
-   2.6. Conclusion
+   	- 2.1.1 Caractéristiques des Encodeurs Incrémentaux  
+   	- 2.1.2 Caractéristiques Particulières dans Notre Cas d'Utilisation  
+   2.2. Description du Code  
+      - 2.2.1. Fichiers Inclus  
+      - 2.2.2. Fonction `MyEncoder_Base_Init`  
+      - 2.2.3. Fonction `Get_MyEncoder`  
+      - 2.2.4. Fonction `Get_MyEncoder_In_Deg`  
+      - 2.2.5. Fonction `Reset_MyEncoder`  
+   2.3. Utilisation de l'Encodeur  
+   2.4. Conclusion
 
 3. **Documentation de l'ADC**  
    3.1. Introduction au Convertisseur Analogique-Numérique (ADC)  
