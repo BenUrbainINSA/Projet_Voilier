@@ -9,7 +9,8 @@
 2. **Documentation de l'Encodeur**  
    2.1. Introduction aux Encodeurs  
    	- 2.1.1 Caractéristiques des Encodeurs Incrémentaux  
-   	- 2.1.2 Caractéristiques Particulières dans Notre Cas d'Utilisation  
+   	- 2.1.2 Caractéristiques Particulières dans Notre Cas d'Utilisation
+  
    2.2. Description du Code  
       - 2.2.1. Fichiers Inclus  
       - 2.2.2. Fonction `MyEncoder_Base_Init`  
