@@ -1,4 +1,115 @@
 
+# Documentation de l'Encodeur
+
+## Introduction aux Encodeurs
+
+Un encodeur est un dispositif utilisé pour mesurer la position, la vitesse ou la direction d'un objet en mouvement. Dans les systèmes embarqués, les encodeurs sont souvent utilisés pour contrôler des moteurs et d'autres dispositifs de mouvement. Les encodeurs peuvent être de différents types, mais les encodeurs incrémentaux sont couramment utilisés pour leur simplicité et leur efficacité.
+
+### Caractéristiques des Encodeurs Incrémentaux
+
+- **Résolution** : Le nombre de pulses par tour. Cela définit la précision de la mesure.
+- **Direction** : L'encodeur peut détecter la direction du mouvement en comparant les signaux des deux canaux.
+- **Position** : L'encodeur peut donner une position relative à partir d'un point de départ.
+
+### Caractéristiques particulière dans notre cas d'utilisation
+
+Dans notre cas nous utilisons la fonctionnalité encodeur des timer, c'est à dire que le compteur du timer va réagir aux front montant et descendant de notre encodeur, permettant une mesure instantané de sa valeur. 
+
+## Description du Code
+
+### Fichiers Inclus
+
+```c
+#include "stm32f10x.h"
+#include "MyEncoder.h"
+```
+
+Ces fichiers incluent les définitions et déclarations nécessaires pour travailler avec la bibliothèque STM32 et votre propre bibliothèque d'encodeurs.
+
+### Fonction `MyEncoder_Base_Init`
+
+```c
+void MyEncoder_Base_Init(TIM_TypeDef * Timer, unsigned short ARR);
+```
+
+**Paramètres** :
+- `TIM_TypeDef * Timer`: Pointeur vers l'instance du timer (TIM1, TIM2, TIM3 ou TIM4) utilisé pour lire les signaux de l'encodeur.
+- `unsigned short ARR`: Valeur du registre d'auto-rechargement (ARR) pour définir la période du timer.
+
+**Fonctionnement** :
+1. **Activation de l'Horloge** :
+   - L'horloge pour le timer spécifié est activée via les registres RCC (Reset and Clock Control).
+
+2. **Configuration des Broches GPIO** :
+   - Les broches PA0 et PA1 sont configurées comme entrées flottantes pour recevoir les signaux d'encodeur.
+   - PA2 est également configurée pour être utilisée avec une interruption EXTI (External Interrupt) lorsque Z passe à 1.
+
+3. **Configuration du Timer** :
+   - Le registre ARR du timer est configuré pour définir la période du timer (ici le nombre de pas de l'encodeur).
+   - Les modes de comptage sont configurés pour utiliser les entrées TI1 et TI2.
+   - Les canaux de capture de comparaison sont configurés pour lire les signaux d'encodeur (CC1S et CC2S).
+   - Les filtres de capture d'entrée (IC1F et IC2F) sont désactivés car il ne semble pas y avoir de pb de bruit.
+   - Le timer est activé en mettant le bit CEN (Counter Enable) à 1.
+
+### Fonction `Get_MyEncoder`
+
+```c
+int16_t Get_MyEncoder(TIM_TypeDef * Timer);
+```
+
+**Paramètres** :
+- `TIM_TypeDef * Timer`: Pointeur vers l'instance du timer configuré.
+
+**Fonctionnement** :
+- Cette fonction retourne la valeur actuelle du compteur d'encodeur (CNT) sous forme d'un entier signé (`int16_t`). Cela donne une indication de la position de l'encodeur.
+
+### Fonction `Get_MyEncoder_In_Deg`
+
+```c
+float Get_MyEncoder_In_Deg(TIM_TypeDef * Timer);
+```
+
+**Paramètres** :
+- `TIM_TypeDef * Timer`: Pointeur vers l'instance du timer configuré.
+
+**Fonctionnement** :
+- Cette fonction calcule la position de l'encodeur en degrés en fonction de la valeur du compteur (`CNT`) et de la valeur d'auto-rechargement (`ARR`).
+- La formule utilisée est : 
+  \[
+  \text{Position en degrés} = \left(\frac{\text{Valeur de l'encodeur} \times \text{ARR}}{\text{RESOLUTION de l'encodeur}}\right)
+  \]
+
+### Fonction `Reset_MyEncoder`
+
+```c
+void Reset_MyEncoder(TIM_TypeDef * Timer);
+```
+
+**Paramètres** :
+- `TIM_TypeDef * Timer`: Pointeur vers l'instance du timer configuré.
+
+**Fonctionnement** :
+- Cette fonction réinitialise le compteur d'encodeur à zéro en écrivant 0 dans le registre CNT.
+
+### Utilisation de l'Encodeur
+
+1. **Initialisation** :
+   - Appeler `MyEncoder_Base_Init` pour configurer l'encodeur avec les paramètres souhaités (timer et valeur ARR).
+
+2. **Obtenir la Valeur de l'Encodeur** :
+   - Utiliser `Get_MyEncoder` pour lire la position actuelle de l'encodeur.
+
+3. **Obtenir la Position en Degrés** :
+   - Appeler `Get_MyEncoder_In_Deg` pour convertir la valeur de l'encodeur en une position angulaire en degrés.
+
+4. **Réinitialiser l'Encodeur** :
+   - Appeler `Reset_MyEncoder` pour réinitialiser le compteur de l'encodeur.
+
+### Conclusion
+
+Ce code permet de configurer et d'utiliser efficacement un encodeur incrémental dans un microcontrôleur STM32. Il fournit des fonctions pour l'initialisation, la lecture de la position et la réinitialisation du compteur d'encodeur, facilitant ainsi le contrôle de la position et de la direction des systèmes de mouvement.
+
+---
 
 # Documentation de l'ADC
 
