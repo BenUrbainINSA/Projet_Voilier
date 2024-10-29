@@ -17,7 +17,7 @@ Voici la table des matières mise à jour, avec l'encodeur en premier suivi de l
       - 2.3.1. Initialisation de l'Encodeur
       - 2.3.2. Obtention de la Valeur de l'Encodeur
       - 2.3.3. Réinitialisation de l'Encodeur
-- 2.4. Conclusion de l'Encodeur
+   - 2.4. Conclusion de l'Encodeur
 
 3. **Documentation de l'ADC**
    - 3.1. Introduction à l'ADC
@@ -30,7 +30,7 @@ Voici la table des matières mise à jour, avec l'encodeur en premier suivi de l
       - 3.3.1. Initialisation de l'ADC
       - 3.3.2. Démarrage de la Conversion
       - 3.3.3. Lecture des Résultats
-- 3.4. Conclusion de l'ADC
+   - 3.4. Conclusion de l'ADC
 
 ---
 # Introduction 
