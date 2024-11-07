@@ -4,7 +4,7 @@
 # Table des Matières
 
 1. **Introduction**  
-   blablalbla
+   blablalblabla
 
 2. **Documentation de l'Encodeur**  
    2.1. Introduction aux Encodeurs  
