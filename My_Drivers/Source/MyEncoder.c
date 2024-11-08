@@ -20,7 +20,7 @@ void MyEncoder_Base_Init(TIM_TypeDef * Timer,unsigned short ARR){
 			MyGPIO_Init(GPIOA,'0',In_Floating,In,None);   //setup PA0 et PA1 en floating input 
 			MyGPIO_Init(GPIOA,'1',In_Floating,In,None);
 			
-			MyGPIO_Init(GPIOA,'2',In_Floating,In,None); //on va mettre en place une interuption EXTIx sur le PA2 dans driver GPIO
+			MyGPIO_Init(GPIOB,'3',In_Floating,In,None); //on va mettre en place une interuption EXTIx sur le PA3 dans driver GPIO
 			
       Timer->ARR=ARR-1;   //pas de préscaler car on utilise uniquement le registre ARR
 			
@@ -42,7 +42,7 @@ float Get_MyEncoder_In_Deg(TIM_TypeDef * Timer){
 	int ARR = Timer->ARR;
 	int Encoder_value = Timer->CNT;
 	
-	return (Encoder_value*ARR)/ENCODER_RESOLUTION;
+	return (Encoder_value)/4;
 
 }
 

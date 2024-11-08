@@ -71,26 +71,26 @@ void MyGPIO_Toggle (GPIO_TypeDef * GPIO, char GPIO_Pin){
 
 void(*pFnc2)(TIM_TypeDef * Timer); //pointeur de fonction pour l'interuption 
 
-void MyGPIO_Active_EXTI2_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer)){
+void MyGPIO_Active_EXTI3_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer)){
 	
 	pFnc2=IT_function;
 	
 	RCC->APB2ENR |= RCC_APB2ENR_AFIOEN; //on active l'horloge 
 	AFIO->EXTICR[2] &= ~(0xF); // clear exti2 bits 
-	AFIO->EXTICR[2] |= AFIO_EXTICR1_EXTI2_PA; // op paramètre Exti2 sur PA 
+	AFIO->EXTICR[2] |= AFIO_EXTICR2_EXTI4_PA; // op paramètre Exti2 sur PA 
 	
 	//Déclanchement de EXTI2 sur front montant 
-	EXTI->IMR |= EXTI_IMR_MR2;  //on active le trigger sur la ligne 2 
-	EXTI->RTSR |= EXTI_RTSR_TR2; //on active le triger sur front montant 
-	EXTI->FTSR &= ~EXTI_FTSR_TR2; // on désactive le trigger sur front descendant
+	EXTI->IMR |= EXTI_IMR_MR4;  //on active le trigger sur la ligne 2 
+	EXTI->RTSR |= EXTI_RTSR_TR4; //on active le triger sur front montant 
+	EXTI->FTSR &= ~EXTI_FTSR_TR4; // on désactive le trigger sur front descendant
 	
 	// Configurer l'interruption NVIC pour EXTI2
-  NVIC_EnableIRQ(EXTI2_IRQn);            // Activer l'IRQ EXTI2
-  NVIC_SetPriority(EXTI2_IRQn, Prio);    // Définir la priorité
+  NVIC_EnableIRQ(EXTI4_IRQn);            // Activer l'IRQ EXTI2
+  NVIC_SetPriority(EXTI4_IRQn, Prio);    // Définir la priorité
 	
 }
 
-void EXTI2_IRQHandler(void){
+void EXTI4_IRQHandler(void){
 	
       EXTI->PR = EXTI_PR_PR2;  //abaissement du flag d'interuption 
 			TIM_TypeDef *timer = TIM2; // on utilise TIM2

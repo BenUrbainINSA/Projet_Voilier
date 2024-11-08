@@ -32,7 +32,7 @@ void MyGPIO_Toggle (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 
 
-void MyGPIO_Active_EXTI2_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer));   // EXTIx avec x=2 car on veut paramétrer sur PA02, pas 
+void MyGPIO_Active_EXTI3_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer));   // EXTIx avec x=2 car on veut paramétrer sur PA02, pas 
 void EXTI2_IRQHandler(void);
 
 #endif

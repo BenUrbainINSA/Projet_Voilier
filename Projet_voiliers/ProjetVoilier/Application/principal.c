@@ -2,13 +2,16 @@
 #include "MyEncoder.h"
 #include "Driver_GPIO.h"
 
+float Encoder_value;
+int gpio;
+
 int main ( void )
 {
-	float Encoder_value;
 	MyEncoder_Base_Init(TIM2,4*360);
-	MyGPIO_Active_EXTI2_IT(0x0f,Reset_MyEncoder);   //reset l'encodeur quand Z vaut 1 !
+	MyGPIO_Active_EXTI3_IT(0x01,Reset_MyEncoder);   //reset l'encodeur quand Z vaut 1 !
 	while (1)
 	{
 		Encoder_value=Get_MyEncoder_In_Deg(TIM2);
+		gpio = MyGPIO_Read(GPIOA,4);
 	}
 }
