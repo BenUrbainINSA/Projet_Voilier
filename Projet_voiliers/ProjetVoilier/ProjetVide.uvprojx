@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\..\My_Drivers\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,21 +395,6 @@
           <GroupName>Drivers</GroupName>
           <Files>
             <File>
-              <FileName>Driver_GPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\Driver_GPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyEncoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\MyEncoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\MyTimer.h</FilePath>
-            </File>
-            <File>
               <FileName>Driver_GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\My_Drivers\Source\Driver_GPIO.c</FilePath>
@@ -438,7 +423,7 @@
       <TargetName>Simulation</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -822,21 +807,6 @@
         <Group>
           <GroupName>Drivers</GroupName>
           <Files>
-            <File>
-              <FileName>Driver_GPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\Driver_GPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyEncoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\MyEncoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\My_Drivers\Include\MyTimer.h</FilePath>
-            </File>
             <File>
               <FileName>Driver_GPIO.c</FileName>
               <FileType>1</FileType>
