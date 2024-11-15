@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\My_Drivers\Include</IncludePath>
+              <IncludePath>..\..\My_Drivers\Include;..\..\My_Services\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,6 +413,21 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\My_Drivers\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyServo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyServo.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Services</GroupName>
+          <Files>
+            <File>
+              <FileName>GestionVoile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionVoile.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -831,6 +846,21 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\My_Drivers\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyServo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyServo.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Services</GroupName>
+          <Files>
+            <File>
+              <FileName>GestionVoile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionVoile.c</FilePath>
             </File>
           </Files>
         </Group>

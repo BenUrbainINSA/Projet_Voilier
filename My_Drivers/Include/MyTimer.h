@@ -11,7 +11,7 @@ void MyTimer_Base_Init(TIM_TypeDef * Timer,unsigned short ARR,unsigned short PSC
 void MyTimer_ActiveIT(TIM_TypeDef * Timer, char Prio,void(*IT_function)(void));
 
 void MyTimer_PWM(TIM_TypeDef * Timer,char Channel,char mode);
-void Set_PWM_Duty_Cycle(TIM_TypeDef * Timer,char valeur, char channel);
+void Set_PWM_Duty_Cycle(TIM_TypeDef * Timer,float valeur, char channel);
 
 
 void TIM2_IRQHandler(void);

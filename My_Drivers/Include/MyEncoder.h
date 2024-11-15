@@ -5,6 +5,7 @@
 #include "Driver_GPIO.h"
 
 #define ENCODER_RESOLUTION 360
+#define OFFSET_ENCODER 186
 
 //on paramètre l'encodeur en quadrature donc SMS=011, paramètre statique , de meme on va utiliser PA0 et PA1 pour les channels du timer 
 void MyEncoder_Base_Init(TIM_TypeDef * Timer,unsigned short ARR);   

@@ -1,4 +1,5 @@
 #include "stm32f10x.h"
+#include "MyTimer.h"
 
 void MyTimer_Base_Init(TIM_TypeDef * Timer,unsigned short ARR,unsigned short PSC,char Type){
       
@@ -109,19 +110,19 @@ void MyTimer_PWM(TIM_TypeDef * Timer,char Channel,char mode){
 			
 }
 
-void Set_PWM_Duty_Cycle(TIM_TypeDef * Timer,char valeur, char channel){
+void Set_PWM_Duty_Cycle(TIM_TypeDef * Timer,float valeur, char channel){
 	
 			if (channel == 1){
-				Timer->CCR1= valeur;
+				Timer->CCR1= (Timer->ARR *valeur)/100;
 
 			}else if (channel == 2) {
-				Timer->CCR2= Timer->ARR * valeur/100;
+				Timer->CCR2=( Timer->ARR *valeur)/100;
 			}
 			else if (channel == 3) {
-				Timer->CCR3= Timer->ARR * valeur/100;
+				Timer->CCR3= (Timer->ARR * valeur)/100;
 				
 			}else if (channel == 4){
-				Timer->CCR4= Timer->ARR * valeur/100;
+				Timer->CCR4= (Timer->ARR * valeur)/100;
 			}
 
 }

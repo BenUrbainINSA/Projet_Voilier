@@ -92,7 +92,7 @@ void MyGPIO_Active_EXTI3_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer)){
 
 void EXTI4_IRQHandler(void){
 	
-      EXTI->PR = EXTI_PR_PR2;  //abaissement du flag d'interuption 
+      EXTI->PR = ~EXTI_PR_PR2;  //abaissement du flag d'interuption 
 			TIM_TypeDef *timer = TIM2; // on utilise TIM2
 			if (pFnc2 !=0){     // quand on a interrruption -> on appelle pfnc 
 					(*pFnc2)(timer);
