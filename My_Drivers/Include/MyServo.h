@@ -6,7 +6,7 @@
 #include "Driver_GPIO.h"
 
 void MyServo_init(TIM_TypeDef * Timer);
-void MyServo_set(TIM_TypeDef * Timer,int angle);
+void MyServo_set(TIM_TypeDef * Timer,float duty);
 
 
 #endif 

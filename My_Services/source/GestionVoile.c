@@ -10,10 +10,12 @@ void GestionVoile_Init(){
 
 void GestionVoile_Direction(int Encoder){
 		
-		int duty_cycle;
+		float duty_cycle;
+		float angle_voile_deg; 
 	
-		if ((Encoder<=180) || (Encoder>=45)){
-			duty_cycle = ((2/3)*Encoder*-0.1)+10;
+		if ((Encoder<=180) && (Encoder>=45)){
+			angle_voile_deg = (0.6667)*Encoder;      // revoir notre loi affine, elle ne marche pas sur les extrema 
+			duty_cycle = 10 -0.1*angle_voile_deg;
 			MyServo_set(TIM4,duty_cycle);	
 		}
 		else{	

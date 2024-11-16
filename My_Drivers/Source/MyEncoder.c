@@ -41,7 +41,7 @@ int16_t Get_MyEncoder(TIM_TypeDef * Timer){    //renvois la valeure de l'encodeu
 	return (int16_t)Timer->CNT;
 }
 
-float Get_MyEncoder_In_Deg(TIM_TypeDef * Timer){
+int Get_MyEncoder_In_Deg(TIM_TypeDef * Timer){
 	int Encoder_value = Timer->CNT;
 	int output = (((Encoder_value)/4)-OFFSET_ENCODER);
 	

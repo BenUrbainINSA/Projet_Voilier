@@ -2,7 +2,7 @@
 #include "GestionVoile.h"
 
 
-float Encoder_value;
+int Encoder_value;
 int gpio;
 float angle =0.0;
 float angle_prev=0.0;

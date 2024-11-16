@@ -9,8 +9,8 @@ void MyServo_init(TIM_TypeDef * Timer){  //on va utiliser timer 4 et channel 1 d
 	MyTimer_PWM(Timer,1,PWM_mode_2);
 	Set_PWM_Duty_Cycle(Timer,15/2,1); //on place le servo a 0 
 }
-void MyServo_set(TIM_TypeDef * Timer,int angle){
+void MyServo_set(TIM_TypeDef * Timer,float duty){
 	//float angleTOdutyCycle = 100-((1.5+ angle/360)*10)/2;
-	float angleTOdutyCycle =100-angle;
-	Set_PWM_Duty_Cycle(Timer,angleTOdutyCycle,1);
+	float dutyCycle =100-duty;
+	Set_PWM_Duty_Cycle(Timer,dutyCycle,1);
 }

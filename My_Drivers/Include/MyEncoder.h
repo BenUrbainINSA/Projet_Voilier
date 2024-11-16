@@ -11,7 +11,7 @@
 void MyEncoder_Base_Init(TIM_TypeDef * Timer,unsigned short ARR);   
 int16_t Get_MyEncoder(TIM_TypeDef * Timer);
 
-float Get_MyEncoder_In_Deg(TIM_TypeDef * Timer);
+int Get_MyEncoder_In_Deg(TIM_TypeDef * Timer);
 
 void Reset_MyEncoder(TIM_TypeDef * Timer);
 
