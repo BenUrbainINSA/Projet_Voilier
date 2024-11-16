@@ -1,4 +1,5 @@
 #include "stm32f10x.h"
+#include "MyTimer.h"
 
 void MyTimer_Base_Init(TIM_TypeDef * Timer,unsigned short ARR,unsigned short PSC,char Type){
       
