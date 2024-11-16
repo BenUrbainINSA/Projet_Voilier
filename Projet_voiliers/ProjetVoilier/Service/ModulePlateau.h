@@ -9,6 +9,6 @@
 	Sens = Droite ou Gauche
 	Vitesse = entier de 0 à 100
 */
-void TournerPlateau(int Sens, int Vitesse);
+void ModulePlateau_Tourner(int Sens, int Vitesse);
 
 #endif

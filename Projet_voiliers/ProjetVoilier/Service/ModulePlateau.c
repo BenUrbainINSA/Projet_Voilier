@@ -2,7 +2,7 @@
 #include "Driver_GPIO.h"
 #include "MyTimer.h"
 
-void TournerPlateau(int Sens, int Vitesse){
+void ModulePlateau_Tourner(int Sens, int Vitesse){
 	
   //bit de sens
 	MyGPIO_Init (GPIOC, 3, Out_Ppull, Out10Mhz, 0);
