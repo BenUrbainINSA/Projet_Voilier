@@ -422,7 +422,7 @@
             <File>
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Service\ModulePlateau.c</FilePath>
+              <FilePath>.\Service\Source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -768,7 +768,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\My_Drivers\Include;..\..\My_Drivers\Include</IncludePath>
+              <IncludePath>..\..\My_Drivers\Include;.\Service\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -850,7 +850,7 @@
             <File>
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Service\ModulePlateau.c</FilePath>
+              <FilePath>.\Service\Source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>

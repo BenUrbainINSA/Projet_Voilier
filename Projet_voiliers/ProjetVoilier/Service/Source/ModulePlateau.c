@@ -20,3 +20,7 @@ void ModulePlateau_Tourner(int Sens, int Vitesse){
 	MyTimer_Base_Start(TIM2);
 	Set_PWM_Duty_Cycle(TIM2, Vitesse, 1);
 }
+
+void ModulePlateau_Stopper(){
+	MyTimer_Base_Stop(TIM2);
+}
