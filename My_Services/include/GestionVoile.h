@@ -5,11 +5,11 @@
 #include "MyEncoder.h"
 #include "MyServo.h"
 
-#define Voile0deg 10
+#define Voile0deg 5  
 
 
 
-void GestionVoile_Init();
+void GestionVoile_Init(void);
 
 void GestionVoile_Direction(int Encoder);
 
