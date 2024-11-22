@@ -29,10 +29,10 @@ mode : modes de fonctionnement de l'adc
 #define Single_Not_Cont 0x0
 #define Single_Cont  0x01
 
-void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,TIM_TypeDef * Timer,char mode );
+void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode );
 void MyADC_StartConv(ADC_TypeDef * ADC);
-uint16_t MyADC_Read(ADC_TypeDef * ADC);
-void ADC1_2_IRQHandler(void);
+double MyADC_Read(ADC_TypeDef * ADC);
+//void ADC1_2_IRQHandler(void);
 
 
 
