@@ -24,15 +24,69 @@
 type : Si c'est en In ou en Out xMhz 
 Pull : correspond au niveau de l'étage Pull Up/down si utilisé (Up/Down) sinon (None)
 */
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void MyGPIO_Init (GPIO_TypeDef * GPIO , char GPIO_Pin, char GPIO_Conf, char type, int Pull);
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 int MyGPIO_Read (GPIO_TypeDef * GPIO, char GPIO_Pin);
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void MyGPIO_Set (GPIO_TypeDef * GPIO, char GPIO_Pin);
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void MyGPIO_Reset (GPIO_TypeDef * GPIO, char GPIO_Pin);
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void MyGPIO_Toggle (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 
-
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void MyGPIO_Active_EXTI3_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer));   // EXTIx avec x=2 car on veut paramétrer sur PA02, pas 
+
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void EXTI2_IRQHandler(void);
 
 #endif

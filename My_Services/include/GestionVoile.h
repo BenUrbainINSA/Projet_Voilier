@@ -8,9 +8,22 @@
 #define Voile0deg 5  
 
 
-
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void GestionVoile_Init(void);
 
+/*
+@Brief 
+@Note
+@Paramin
+@Paramout
+@Example
+*/
 void GestionVoile_Direction(int Encoder);
 
 
