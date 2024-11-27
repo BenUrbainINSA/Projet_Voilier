@@ -1,8 +1,10 @@
 #include "ModulePlateau.h"
 #include "Driver_GPIO.h"
 #include "MyTimer.h"
+#include "MyUSART.h"
 
 void ModulePlateau_Init(){
+	MyUSART_Init(USART1, 9600);
 	MyGPIO_Init (GPIOC, 3, Out_Ppull, Out10Mhz, 0);
 	MyGPIO_Init (GPIOA, 0, AltOut_Ppull, Out10Mhz, 0);
 	MyTimer_Base_Init(TIM2, 36, 100, My_timer_Up);
@@ -10,37 +12,17 @@ void ModulePlateau_Init(){
 }
 
 
-void ModulePlateau_Tourner(int Sens, int Vitesse){
+void ModulePlateau_Tourner(){
 	
-  //bit de sens
-
-	if (Sens){
-	MyGPIO_Reset (GPIOC, 3);
-	}
-	else{
-	MyGPIO_Set (GPIOC, 3);
-	}
-	
-	//PWM plateau
+  //bit de sens		//PWM plateau
 	MyTimer_Base_Start(TIM2);
-	Set_PWM_Duty_Cycle(TIM2, Vitesse, 1);
-}
-
-void ModulePlateau_Stopper(){
-	Set_PWM_Duty_Cycle(TIM2, 0, 1);
-}
-
-
-void ModulePlateau_Tele(char data){
-	if (data<0){
-		ModulePlateau_Tourner(Droite, -data);
+	if (USART1data>=0){
+		MyGPIO_Reset (GPIOC, 3);
+		Set_PWM_Duty_Cycle(TIM2, USART1data, 1);
 	}
-	else if (data>0){
-		ModulePlateau_Tourner(Gauche, data);
+	else if (USART1data<0){
+		MyGPIO_Set (GPIOC, 3);
+		Set_PWM_Duty_Cycle(TIM2, -USART1data, 1);
 	}
-	else if (data==0){
-		ModulePlateau_Stopper();
-	}
-
 }
 

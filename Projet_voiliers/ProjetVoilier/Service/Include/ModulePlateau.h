@@ -5,12 +5,13 @@
 #define Gauche 1
 
 /*
-	@Brief : Fonction qui configure les pins et les timers nécéssaire pour la rotation du plateau
+	@Brief : Fonction qui configure les pins, timers et l'usart nécéssaire pour la rotation du plateau
 	@Note : 	Pins utilisé :	
 							- bit de sens = PC3
 							- PWM moteur = PA0
 						Périph utilisé :
 							- TIM2
+							- USART 1
 	@Parr in : --
 	@Parr out : --
 	@Exemple : ModulePlateau_Init();
@@ -18,31 +19,13 @@
 void ModulePlateau_Init();
 
 /*
-	@Brief : Fonction qui commande la rotation du plateau
+	@Brief : Fonction qui commande la rotation du plateau à l'aide de la télécommande
 	@Note : Si on envoie 100 trop brusquement un mode de protection s'active
-	@Parr in : Sens (Droite ou Gauche), Vitesse [0, 100]
+					Il faut appeler ModulePlateau_Init() avant d'appeler cette fonction
+	@Parr in : -- (utilise les données reçues sur l'USART 1)
 	@Parr out : --
 	@Exemple : ModulePlateau_Tourner(Droite, 55);
 */
-void ModulePlateau_Tourner(int Sens, int Vitesse);
-
-/*
-	@Brief : Fonction qui stop le plateau
-	@Parr in : --
-	@Parr out : --
-	@Exemple : ModulePlateau_Stopper();
-*/
-void ModulePlateau_Stopper();
-
-
-
-/*
-	@Brief : Fonction qui controle le plateau par télécommande
-	@Note : Fonction à appeler dans un while (en boucle)
-	@Parr in : data (variable globale liée à l'USART utilisée)
-	@Parr out : --
-	@Exemple : ModulePlateau_tele(USART1data);
-*/
-void ModulePlateau_Tele(char data);
+void ModulePlateau_Tourner();
 
 #endif
