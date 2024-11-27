@@ -5,6 +5,7 @@
 #include "Driver_GPIO.h"
 #include "MyADC.h"
 #include "MyUSART.h"
+#include "MyTimer.h"
 #include <string.h>
 #include <stdio.h>
 

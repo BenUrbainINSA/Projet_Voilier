@@ -439,6 +439,11 @@
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionBatterie.c</FilePath>
             </File>
+            <File>
+              <FileName>GestionTransmission.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -881,6 +886,11 @@
               <FileName>GestionBatterie.c</FileName>
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionBatterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>GestionTransmission.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
             </File>
           </Files>
         </Group>
