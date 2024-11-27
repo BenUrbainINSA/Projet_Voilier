@@ -6,11 +6,11 @@ void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode ){
 	
 	//active les clocks
 	if (ADC==ADC1) {
-		RCC->APB2ENR |=RCC_CFGR_ADCPRE_1 ;  //adc prescaler à 6
+		RCC->CFGR |=RCC_CFGR_ADCPRE_DIV6 ;  //adc prescaler à 6
 		RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
 		
 	}else if (ADC==ADC2){
-		RCC->APB2ENR |=RCC_CFGR_ADCPRE_1 ;
+		RCC->CFGR |=RCC_CFGR_ADCPRE_DIV6 ;
 		RCC->APB2ENR |= RCC_APB2ENR_ADC2EN;
 	}
 	
@@ -18,8 +18,13 @@ void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode ){
 	if (mode == Single_Not_Cont){
 	
 	//Activation de l'ADC
-	ADC->CR2 |=ADC_CR2_ADON;	
+		ADC->CR2 |=ADC_CR2_ADON;	
+	//calibration 
 		
+	ADC->CR2 |= ADC_CR2_CAL;
+	while ((ADC->CR2 & ADC_CR2_CAL)==ADC_CR2_CAL){}
+	}	
+	
 	//paramétrage du channel 
 	ADC->SQR3 &= ~(ADC_SQR3_SQ1);   //on initalise le registre de channel pour la 1ere et unique convertion
 	ADC->SQR3 |=channel;  //on ecrit les bit du channel dans SQ1 (pas besoin de décalage car 1ere element
@@ -40,22 +45,22 @@ void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode ){
 	ADC->CR2 |= ADC_CR2_EXTTRIG;
 	
 	ADC->CR2 &= ~(ADC_CR2_EXTSEL); //efface les bit sur le selcteur de trigger   deja aligné a droite 
+	ADC->CR2 |=ADC_CR2_EXTSEL_0|ADC_CR2_EXTSEL_1|ADC_CR2_EXTSEL_2;
 
-	//calibration 
-	ADC->CR2 |= ADC_CR2_CAL;
-	while ((ADC->CR2 &= ADC_CR2_CAL)==ADC_CR2_CAL){}
-	}
-
+	
 	
 }
 
-void MyADC_Conv(ADC_TypeDef * ADC){     //a modifier en ajoutant le read en ent mettant le parametrage du trigger dedans.
+void MyADC_StartConv(ADC_TypeDef * ADC){     //a modifier en ajoutant le read en ent mettant le parametrage du trigger dedans.
 	ADC->CR2|= ADC_CR2_SWSTART; //on demarre la conversation 
 }
 
-double MyADC_Read(ADC_TypeDef * ADC){
-	double Result =0.0;
+int MyADC_Read(ADC_TypeDef * ADC){
+	int Result =0.0;
+	
+	while ((ADC->SR & ADC_SR_EOC) !=ADC_SR_EOC){}
 	Result= ADC->DR;   //on prend uniquement les 16 1er bits 
+	ADC->SR &= ~(ADC_SR_EOC);
 	return Result;
 }
 

@@ -31,7 +31,7 @@ mode : modes de fonctionnement de l'adc
 
 void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode );
 void MyADC_StartConv(ADC_TypeDef * ADC);
-double MyADC_Read(ADC_TypeDef * ADC);
+int MyADC_Read(ADC_TypeDef * ADC);
 //void ADC1_2_IRQHandler(void);
 
 

@@ -17,8 +17,7 @@ int main ( void )
 	{
 	Encoder_value=Get_MyEncoder_In_Deg(TIM2);
 	GestionVoile_Direction(Encoder_value);
-		
-	read_adc=MyADC_Read(ADC1);
+	GestionBatterie_Read(ADC1,USART1);
 		
 		}
 
