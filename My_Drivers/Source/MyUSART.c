@@ -66,7 +66,7 @@ volatile signed char USART1data;
 void USART1_IRQHandler(void) {
 	//Normalement l'interruption est cleared en lisant dans DR uniquement
 	USART1data =USART1->DR;
-	MyUSART_Send(USART1, &USART1data); //pour tester la bonne réception
+	//MyUSART_Send(USART1, &USART1data); //pour tester la bonne réception
 }
 
 volatile char USART2data;

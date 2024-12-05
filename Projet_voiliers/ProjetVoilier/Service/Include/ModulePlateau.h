@@ -8,9 +8,9 @@
 	@Brief : Fonction qui configure les pins, timers et l'usart nécéssaire pour la rotation du plateau
 	@Note : 	Pins utilisé :	
 							- bit de sens = PC3
-							- PWM moteur = PA0
+							- PWM moteur = PA6
 						Périph utilisé :
-							- TIM2
+							- TIM3
 							- USART 1
 	@Parr in : --
 	@Parr out : --

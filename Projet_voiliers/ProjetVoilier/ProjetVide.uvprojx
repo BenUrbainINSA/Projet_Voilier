@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\My_Drivers\Include;.\Service\Include</IncludePath>
+              <IncludePath>..\..\My_Drivers\Include;.\Service\Include;.\Service\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -428,6 +428,11 @@
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Service\Source\ModulePlateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModuleChavirer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Service\Source\ModuleChavirer.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -861,6 +866,11 @@
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Service\Source\ModulePlateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModuleChavirer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Service\Source\ModuleChavirer.c</FilePath>
             </File>
           </Files>
         </Group>
