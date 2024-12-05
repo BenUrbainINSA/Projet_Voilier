@@ -24,7 +24,8 @@ void GestionVoile_Init(void);
 @Paramout
 @Example
 */
-void GestionVoile_Direction(int Encoder);
+float GestionVoile_Direction(int Encoder);
+
 
 
 #endif

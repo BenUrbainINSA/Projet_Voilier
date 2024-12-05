@@ -17,6 +17,6 @@ void GestionBatterie_Read(ADC_TypeDef * ADC,USART_TypeDef *USART){
 	value*=0.0002441;
 	snprintf(Message,Taille, "%.2f V\n", value);
 	
-	MyUSART_Send(USART1,Message);
+	MyUSART_Send(USART,Message);
 }
 

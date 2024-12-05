@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\My_Drivers\Include;..\..\My_Services\include</IncludePath>
+              <IncludePath>..\..\My_Drivers\Include;..\..\My_Services\include;..\ProjetVoilier</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,6 +388,16 @@
               <FileName>principal.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Application\principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Applicatio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\My_Applicatio.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Application.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\My_Application.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -836,6 +846,16 @@
               <FileName>principal.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Application\principal.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Applicatio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\My_Applicatio.c</FilePath>
+            </File>
+            <File>
+              <FileName>My_Application.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\My_Application.h</FilePath>
             </File>
           </Files>
         </Group>

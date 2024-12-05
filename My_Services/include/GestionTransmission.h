@@ -5,9 +5,13 @@
 #include "GestionBatterie.h"
 #include "GestionVoile.h"
 #include "MyTimer.h"
+#include "MyUSART.h"
+#include "MyEncoder.h"
 
 
-void GestionTrans_Init ();
+void GestionTransmission_Init();
+
+void GestuinTransmission_Trans();
 
 
 
