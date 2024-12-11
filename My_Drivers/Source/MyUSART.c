@@ -72,11 +72,11 @@ void USART1_IRQHandler(void) {
 volatile char USART2data;
 void USART2_IRQHandler(void) {
 	USART2data =USART2->DR;
-	MyUSART_Send(USART2, &USART2data);
+	//MyUSART_Send(USART2, &USART2data);
 }
 
 volatile char USART3data;
 void USART3_IRQHandler(void) {
 	USART3data =USART3->DR;
-	MyUSART_Send(USART3, &USART3data);
+	//MyUSART_Send(USART3, &USART3data);
 }

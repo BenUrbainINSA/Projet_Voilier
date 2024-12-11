@@ -6,7 +6,7 @@
 void ModulePlateau_Init(){
 	MyUSART_Init(USART1, 9600);
 	MyGPIO_Init (GPIOC, 3, Out_Ppull, Out10Mhz, 0);
-	MyGPIO_Init (GPIOA, 0, AltOut_Ppull, Out10Mhz, 0);
+	MyGPIO_Init (GPIOA, 6, AltOut_Ppull, Out10Mhz, 0);
 	MyTimer_Base_Init(TIM3, 36, 100, My_timer_Up);
 	MyTimer_PWM(TIM3, 1, PWM_mode_1);
 }

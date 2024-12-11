@@ -3,19 +3,33 @@
 #include "MyUSART.h"
 
 
-void ModuleChavirer_Init(SPI_TypeDef * SPI, USART_TypeDef *USART){
-	MyUSART_Init(USART, 9600);
-	MySPI_Init(SPI);
+void ModuleChavirer_Init(SPI_TypeDef * SPI){
+
+	MySPI_Init(SPI2);
+	
 	MySPI_Clear_NSS();
 	MySPI_Send(0x00|0x2C);
 	MySPI_Send(0x0A);
+	MySPI_Set_NSS();
+	/*
+	MySPI_Clear_NSS();
+	MySPI_Send(0x80|0x2C);
+	BW_RATE=MySPI_Read();
+	MySPI_Set_NSS();
+	*/
+
+	MySPI_Clear_NSS();
+	MySPI_Send(0x00|0x2D);
+	MySPI_Send(0x0F);
 	MySPI_Set_NSS();
 	
 }
 
 
 
-void ModuleChavirer_Run(USART_TypeDef *USART){
+int ModuleChavirer_Run(){
+	
+	int chav=0;
 	short X=0;
 	short Y=0;
 	
@@ -35,6 +49,10 @@ void ModuleChavirer_Run(USART_TypeDef *USART){
 	MySPI_Set_NSS();
 		
 	if ((X>10000 | X<-10000) | (Y>10000 | Y<-10000)) {
-		MyUSART_Send(USART, "CHAVIREMENT !!!");
+		chav=1;
+	} else {
+		chav=0;
 	}
+		
+	return chav;
 }

@@ -4,9 +4,9 @@
 #include "MyUSART.h"
 
 
-void ModuleChavirer_Init(SPI_TypeDef * SPI, USART_TypeDef *USART);
+void ModuleChavirer_Init(SPI_TypeDef * SPI);
 	
-void ModuleChavirer_Run(USART_TypeDef *USART);
+int ModuleChavirer_Run();
 
 
 
