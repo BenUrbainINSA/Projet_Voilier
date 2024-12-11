@@ -4,10 +4,12 @@
 char Mes[T];
 
 
+
 int k=0;
 int update=0;
 float angle =0.0;
 int Encoder_value;
+int chavirage =0;
 
 
 void App_Init(){
@@ -18,6 +20,8 @@ void App_Init(){
 	MyTimer_Base_Init(TIM1,2000, 7200,My_timer_Up);  //set un timer de 3sec 
 	MyTimer_Base_Start(TIM1);    //on utilise le timer 
 	MyTimer_ActiveIT (TIM1,0x05,CallBack);
+	ModulePlateau_Init();
+	ModuleChavirer_Init(SPI2);
 	}
 
 void App_Run(){
@@ -33,8 +37,15 @@ void App_Run(){
 		}
 		
 		if (k%1 ==0){
+			chavirage=ModuleChavirer_Run();
 			Encoder_value=Get_MyEncoder_In_Deg(TIM2);
-			angle=GestionVoile_Direction(Encoder_value);
+			angle=GestionVoile_Direction(Encoder_value,chavirage);
+			
+			if (chavirage==1){
+				MyUSART_Send(USART1,"JE CHAVIRE\n");
+			}
+			ModulePlateau_Tourner();
+			
 		}
 		
 	}

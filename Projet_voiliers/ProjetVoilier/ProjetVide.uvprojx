@@ -394,11 +394,6 @@
               <FileType>1</FileType>
               <FilePath>.\My_Applicatio.c</FilePath>
             </File>
-            <File>
-              <FileName>My_Application.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\My_Application.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -434,6 +429,11 @@
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyUSART.c</FilePath>
             </File>
+            <File>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -453,6 +453,16 @@
               <FileName>GestionTransmission.c</FileName>
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModuleChavirer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModuleChavirer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModulePlateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -852,11 +862,6 @@
               <FileType>1</FileType>
               <FilePath>.\My_Applicatio.c</FilePath>
             </File>
-            <File>
-              <FileName>My_Application.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\My_Application.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -892,6 +897,11 @@
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyUSART.c</FilePath>
             </File>
+            <File>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -911,6 +921,16 @@
               <FileName>GestionTransmission.c</FileName>
               <FileType>1</FileType>
               <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModuleChavirer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModuleChavirer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModulePlateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>

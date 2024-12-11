@@ -12,12 +12,17 @@ void GestionVoile_Init(){
 
 
 
-float GestionVoile_Direction(int Encoder){
+float GestionVoile_Direction(int Encoder,int chavire){
 		
 		float duty_cycle; 
 		float angle_voile_deg;
 	
-		if (((Encoder<=180) && (Encoder>=45))){
+		if (chavire ==1){
+			angle_voile_deg=0;
+			duty_cycle = 5.0 + (0.0557)*angle_voile_deg;
+			MyServo_set(TIM4,duty_cycle);	
+		}
+		else if (((Encoder<=180) && (Encoder>=45))){
 			angle_voile_deg = (0.6667)*Encoder - 30.0;      
 			duty_cycle = 5.0 + (0.0557)*angle_voile_deg;
 			MyServo_set(TIM4,duty_cycle);	
