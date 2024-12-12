@@ -26,11 +26,15 @@ Pull : correspond au niveau de l'étage Pull Up/down si utilisé (Up/Down) sinon (
 */
 
 /*
-@Brief 
-@Note
-@Paramin
-@Paramout
-@Example
+@Brief Initialise le GPIOx,avec le pin les paramètres demandés
+@Note  ---
+@Paramin  GPIO_TypeDef * GPIO
+					Char GPIO_Pin
+					char GPIO_Conf
+					char type
+					int Pull
+@Paramout ---
+@Example MyGPIO_Init (GPIOA,1,In_PullUpDwn,In,Up)  : Pin 1 de GPIOA en mode mode Input Pull up
 */
 void MyGPIO_Init (GPIO_TypeDef * GPIO , char GPIO_Pin, char GPIO_Conf, char type, int Pull);
 
