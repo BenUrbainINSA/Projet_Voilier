@@ -61,7 +61,7 @@ void MyUSART_Send(USART_TypeDef *USART, char *message){
 	}
 }
 
-volatile char USART1data;
+volatile char signed USART1data;
 void USART1_IRQHandler(void) {
 	//Normalement l'interruption est cleared en lisant dans DR uniquement
 	USART1data =USART1->DR;
