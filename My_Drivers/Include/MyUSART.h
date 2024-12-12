@@ -25,7 +25,7 @@ void MyUSART_Send(USART_TypeDef *USART, char *message);
 	volatile : mieux pour des modifications aléatoires
 */
 
-extern volatile char USART1data;
+extern volatile signed char USART1data;
 void USART1_IRQHandler(void);
 
 extern volatile char USART2data;
