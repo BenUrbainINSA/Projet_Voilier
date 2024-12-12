@@ -422,17 +422,17 @@
             <File>
               <FileName>MyServo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyServo.c</FilePath>
+              <FilePath>..\..\My_Drivers\Source\MyServo.c</FilePath>
             </File>
             <File>
               <FileName>MyUSART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyUSART.c</FilePath>
+              <FilePath>..\..\My_Drivers\Source\MyUSART.c</FilePath>
             </File>
             <File>
               <FileName>Lib_Com_Periph_2022.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
+              <FilePath>..\..\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -442,27 +442,27 @@
             <File>
               <FileName>GestionVoile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionVoile.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionVoile.c</FilePath>
             </File>
             <File>
               <FileName>GestionBatterie.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionBatterie.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionBatterie.c</FilePath>
             </File>
             <File>
               <FileName>GestionTransmission.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionTransmission.c</FilePath>
             </File>
             <File>
               <FileName>ModuleChavirer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModuleChavirer.c</FilePath>
+              <FilePath>..\..\My_Services\source\ModuleChavirer.c</FilePath>
             </File>
             <File>
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModulePlateau.c</FilePath>
+              <FilePath>..\..\My_Services\source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -890,17 +890,17 @@
             <File>
               <FileName>MyServo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyServo.c</FilePath>
+              <FilePath>..\..\My_Drivers\Source\MyServo.c</FilePath>
             </File>
             <File>
               <FileName>MyUSART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Source\MyUSART.c</FilePath>
+              <FilePath>..\..\My_Drivers\Source\MyUSART.c</FilePath>
             </File>
             <File>
               <FileName>Lib_Com_Periph_2022.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
+              <FilePath>..\..\My_Drivers\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -910,27 +910,27 @@
             <File>
               <FileName>GestionVoile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionVoile.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionVoile.c</FilePath>
             </File>
             <File>
               <FileName>GestionBatterie.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionBatterie.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionBatterie.c</FilePath>
             </File>
             <File>
               <FileName>GestionTransmission.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\GestionTransmission.c</FilePath>
+              <FilePath>..\..\My_Services\source\GestionTransmission.c</FilePath>
             </File>
             <File>
               <FileName>ModuleChavirer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModuleChavirer.c</FilePath>
+              <FilePath>..\..\My_Services\source\ModuleChavirer.c</FilePath>
             </File>
             <File>
               <FileName>ModulePlateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>U:\4AE\Micor_controler\ProjetBE_Final\Projet_Voilier\My_Services\source\ModulePlateau.c</FilePath>
+              <FilePath>..\..\My_Services\source\ModulePlateau.c</FilePath>
             </File>
           </Files>
         </Group>

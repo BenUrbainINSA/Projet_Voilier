@@ -48,7 +48,7 @@ int ModuleChavirer_Run(){
 	Y=Y0<<8|Y1;
 	MySPI_Set_NSS();
 		
-	if ((X>10000 | X<-10000) | (Y>10000 | Y<-10000)) {
+	if ((X>27769 | X<-27769) | (Y>27769 | Y<-27769)) {
 		chav=1;
 	} else {
 		chav=0;
