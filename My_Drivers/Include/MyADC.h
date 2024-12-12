@@ -29,8 +29,38 @@ mode : modes de fonctionnement de l'adc
 #define Single_Not_Cont 0x0
 #define Single_Cont  0x01
 
+
+/*
+@Brief : Initialise l'ADC pour un canal et une configuration spécifiques.
+@Note
+@Paramin : ADC = pointeur vers le périphérique ADC à configurer
+					 channel = Canal ADC à utiliser
+					 Te = Temps d'échantillonage, on utilisera les constantes Te_1_5,...
+					 mode = mode de fonctionnement de l'ADC (on utilisera seulement le Single_Not_Cont)
+
+@Paramout
+@Example : MyADC_Init(ADC1, 5, Te_13_5, Single_Not_Cont); 
+*/
 void MyADC_Init(ADC_TypeDef * ADC,char channel,char Te,char mode );
+
+
+/*
+@Brief : Démarre la conversion ADC.
+@Note
+@Paramin: ADC = Pointeur vers le périphérique ADC à utiliser.
+@Paramout
+@Example : MyADC_StartConv(ADC1); 
+*/
+
 void MyADC_StartConv(ADC_TypeDef * ADC);
+
+/*
+@Brief : Lit le résultat de la conversion ADC.
+@Note
+@Paramin : ADC = Pointeur vers le périphérique ADC à lire.
+@Paramout : Retourne un entier représentant la valeur numérique convertie (comprise entre 0 et 4095).
+@Example : int adc_value = MyADC_Read(ADC1); 
+*/
 int MyADC_Read(ADC_TypeDef * ADC);
 //void ADC1_2_IRQHandler(void);
 

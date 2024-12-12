@@ -9,6 +9,9 @@
 #include "MyEncoder.h"
 
 
+//Ce service n'est finalement pas utilisé
+
+
 void GestionTransmission_Init();
 
 void GestuinTransmission_Trans();

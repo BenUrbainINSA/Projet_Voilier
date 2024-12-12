@@ -39,57 +39,62 @@ Pull : correspond au niveau de l'étage Pull Up/down si utilisé (Up/Down) sinon (
 void MyGPIO_Init (GPIO_TypeDef * GPIO , char GPIO_Pin, char GPIO_Conf, char type, int Pull);
 
 /*
-@Brief 
+@Brief : Lis l'entrée de la Pin choisie sur le GPIO 
 @Note
-@Paramin
-@Paramout
-@Example
+@Paramin: GPIO_TypeDef * GPIO
+					GPIO_Pin
+@Paramout: entier 0 ou 1
+@Example : p = MyGpio_Read(GPIOA,1)
 */
 int MyGPIO_Read (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 /*
-@Brief 
+@Brief: Force un pin du GPIO à l'état haut
 @Note
-@Paramin
-@Paramout
-@Example
+@Paramin : GPIO_TypeDef * GPIO
+					 GPIO_Pin
+@Paramout 
+@Example : MyGPIO_Set(GPIOA,1)
 */
 void MyGPIO_Set (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 /*
-@Brief 
+@Brief : Force un pin du GPIO a l'état bas
 @Note
-@Paramin
+@Paramin : GPIO_TypeDef * GPIO
+					 GPIO_Pin
 @Paramout
-@Example
+@Example : MyGPIO_Reset(GPIOA,1)
 */
 void MyGPIO_Reset (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 /*
-@Brief 
+@Brief : Inverse l'état actuel du pin du GPIO
 @Note
-@Paramin
+@Paramin : GPIO_TypeDef * GPIO
+					 GPIO_Pin
 @Paramout
-@Example
+@Example : MyGPIO_Toggle(GPIOA,1)
 */
 void MyGPIO_Toggle (GPIO_TypeDef * GPIO, char GPIO_Pin);
 
 
 /*
-@Brief 
-@Note
-@Paramin
+@Brief : Active une interruption externe pour le pin GPIO PA3 avec une certaine priorité
+@Note  
+@Paramin : Prio (0 = priorité la plus grande)
+					 It_function : pointeur vers la fonction de rappel
 @Paramout
-@Example
+@Example : MyGPIO_Active_EXTI3_IT(1, MyCallbackFunction)
 */
 void MyGPIO_Active_EXTI3_IT(char Prio, void(*IT_function)(TIM_TypeDef * Timer));   // EXTIx avec x=2 car on veut paramétrer sur PA02, pas 
 
 /*
-@Brief 
+@Brief : Gestionnaire d'interruption pour le pin GPIO EXTI2.
 @Note
-@Paramin
+@Paramin : 
 @Paramout
-@Example
+@Example : void EXTI2_IRQHandler(void){//Traitement ici...}
 */
 void EXTI2_IRQHandler(void);
 
