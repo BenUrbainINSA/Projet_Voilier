@@ -44,8 +44,8 @@ int ModuleChavirer_Run(){
 	X1=MySPI_Read();
 	Y0=MySPI_Read();
 	Y1=MySPI_Read();
-	X=X0<<8|X1;
-	Y=Y0<<8|Y1;
+	X=X1<<8|X0;
+	Y=Y1<<8|Y0;
 	MySPI_Set_NSS();
 		
 	if ((X>29000 | X<-29000) | (Y>29000 | Y<-29000)) {
